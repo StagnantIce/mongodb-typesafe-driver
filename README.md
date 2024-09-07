@@ -1,6 +1,8 @@
 # mongodb-typesafe-driver
 
-Extending mongodb types to make queries type safe.
+Extending mongodb types to make queries type safe.<br />
+
+Deep native, no code, only types. <br />
 
 
 ![alt text](./images/ex1.png?raw=true)<br />
