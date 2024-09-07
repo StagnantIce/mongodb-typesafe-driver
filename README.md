@@ -13,6 +13,6 @@ Extending mongodb types to make queries type safe.
 
 # How it use?
 
-Just use Collection type from repisitory instead original Collection mongdob repostiory.
+Just use Collection type from this repository instead original Collection mongdob type.
 
 See examples.ts for details.
