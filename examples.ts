@@ -36,7 +36,7 @@ getCollection('users').findOne(
         _id: new ObjectId(),
     },
     {
-        sort: { createdAt: -1 },
+        sort: { 'items.id': -1 },
     }
 );
 
@@ -47,6 +47,7 @@ getCollection('users').updateOne(
     {
         $set: {
             createdAt: new Date(),
+            'items.id': new ObjectId()
         }
     }
 );
