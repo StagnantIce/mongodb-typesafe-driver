@@ -1,0 +1,32 @@
+{
+  "name": "mongodb-typesafe-driver",
+  "version": "1.0.0",
+  "description": "mongodb type script safe driver",
+  "main": "index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/StagnantIce/mongodb-typesafe-driver.git"
+  },
+  "keywords": [
+    "mongodb",
+    "typesafe",
+    "type",
+    "script",
+    "driver"
+  ],
+  "author": "StagnantIce",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StagnantIce/mongodb-typesafe-driver/issues"
+  },
+  "homepage": "https://github.com/StagnantIce/mongodb-typesafe-driver#readme",
+  "dependencies": {
+    "mongodb": "^6.8.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
