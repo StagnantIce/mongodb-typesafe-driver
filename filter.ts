@@ -15,9 +15,9 @@ import {
     PropertyType,
 } from 'mongodb';
 
-export declare type Join<T extends unknown[], D extends string> = T extends [] ? '' : T extends [string | number] ? `${T[0]}` : T extends [string | number, ...infer R] ? `${T[0]}${D}${Join<R, D>}` : never;
+type Join<T extends unknown[], D extends string> = T extends [] ? '' : T extends [string | number] ? `${T[0]}` : T extends [string | number, ...infer R] ? `${T[0]}${D}${Join<R, D>}` : never;
 
-export declare type NestedPaths<Type, Depth extends number[]> = Depth['length'] extends 8
+type NestedPaths<Type, Depth extends number[]> = Depth['length'] extends 8
     ? []
     : Type extends string | number | bigint | boolean | Date | RegExp | Uint8Array | ((...args: any[]) => any) | {
         _bsontype: string;
@@ -48,17 +48,17 @@ export declare type NestedPaths<Type, Depth extends number[]> = Depth['length'] 
             }[Extract<keyof Type, string>]
             : [];
 
-export type DeepKeys<TSchema> = Join<NestedPaths<TSchema, []>, '.'>
+type DeepKeys<TSchema> = Join<NestedPaths<TSchema, []>, '.'>
 
-export declare type MatchKeysAndValues<TSchema extends object> = {
+type MatchKeysAndValues<TSchema extends object> = {
     [Property in DeepKeys<TSchema>]?: PropertyType<TSchema, Property>;
 };
 
-export declare type FilterDeepCondition<TSchema extends object> = {
+type FilterDeepCondition<TSchema extends object> = {
     [Property in DeepKeys<TSchema>]?: Condition<PropertyType<TSchema, Property>>;
 };
 
-export declare type Filter<TSchema extends object> = FilterDeepCondition<TSchema>
+export type Filter<TSchema extends object> = FilterDeepCondition<TSchema>
     & RootFilterOperators<WithId<TSchema>>;
 
 type EntitySort<T extends object> = { [P in DeepKeys<T>] ?: SortDirection };
