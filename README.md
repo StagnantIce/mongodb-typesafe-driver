@@ -1,9 +1,17 @@
 # mongodb-typesafe-driver
 
-Extending mongodb types to make queries type safe.<br />
 
-Deep native, no code, only types. <br />
+# Why ?
 
+MongoDb not support type safe, see details:
+
+https://www.mongodb.com/docs/drivers/node/current/fundamentals/typescript/#type-safety-and-dot-notation
+
+# Goal
+
+To improve mongodb types to make queries type safe.<br />
+
+Not use code, only types. <br />
 
 ![alt text](./images/ex1.png?raw=true)<br />
 ![alt text](./images/ex2.png?raw=true)<br />
