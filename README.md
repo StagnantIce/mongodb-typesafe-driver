@@ -1,5 +1,25 @@
 # mongodb-typesafe-driver
 
+Type-safe MongoDB driver for Node.js with improved developer experience using TypeScript.
+
+## ✨ Features
+
+- Fully type-safe operations for MongoDB collections
+- Strongly typed `find`, `insert`, `update`, `aggregate`, etc.
+- Inference for schemas and documents
+- Minimal and dependency-free
+
+## 📦 Installation
+
+```bash
+npm install mongodb-typesafe-driver
+```
+
+Requires mongodb v5 as a peer dependency:
+
+```bash
+npm install mongodb
+```
 
 # Why ?
 
